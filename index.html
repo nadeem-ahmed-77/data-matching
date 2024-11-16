@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f3f4f6;
+      
+      
+    }
+
+      #main {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+      }
+      #main h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+      .group {
+      margin-bottom: 30px;
+      }
+      .group Label {
+      display: block;
+      margin-bottom: 5px;
+      color: #777;
+      }
+      .group input {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      }
+      .error {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 5px ;
+      }
+
+      .btn {
+        width: 100%;
+        margin: auto ;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .btn:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+
+    </style>
+  </head>
+  <body class="light">
+    <div id="main">
+      <h2>User Form</h2>
+      <form action="" onSubmit="submitData(event)">
+        
+        <div class="group">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Enter username"
+          onInput="inputValid(event)"/>
+          <span class="error"></span>
+        </div>
+        
+        <div class="group">
+          <label for="rollNo">Roll No.</label>
+          <input id="rollNo" type="text" placeholder="Enter roll Number" onInput="inputRoll(event)"/>
+          <span class="error"></span>
+        </div>
+
+        <div class="group">
+          <label for="class">Class Name</label>
+          <input id="class" type="text" placeholder="Enter your class name" onInput="inputClass(event)"/>
+          <span class="error"></span>
+        </div>
+
+        <input type="submit" class="btn"/>
+      </form>
+      
+        <div id="result"></div>
+    </div>
+
+    <script src="./app.js"></script>
+    <!-- <script src="./script.js"></script> -->
+  </body>
+</html>
